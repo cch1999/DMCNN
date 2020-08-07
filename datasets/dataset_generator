@@ -1,0 +1,45 @@
+from pypdb import describe_pdb, get_all_info, describe_pdb
+import pypdb
+from tqdm import tqdm, tqdm_gui
+pdb_ids = pypdb.get_all()
+
+def read_list(path):
+	"Reads list stored in txt file"
+	list_enzymes = open(path,'r')
+	list_enzymes = list_enzymes.read()
+	return list(list_enzymes.split(", "))
+ 
+#def add_to_file(path, pdb_id):
+
+ec_path = "/content/drive/My Drive/Colab Notebooks/Old_DMCNN/datasets/EC.txt"
+checked_path = "/content/drive/My Drive/Colab Notebooks/Old_DMCNN/datasets/checked.txt"
+
+ec = open(ec_path, "w")
+checked = open(checked_path, "w")
+
+checked_list = read_list(checked_path)
+
+for i in tqdm(checked_list):
+  if i in pdb_ids:
+    pdb_ids.remove(i)
+
+count = 0
+
+for pdb_id in tqdm(pdb_ids):
+  pdb_info = describe_pdb(pdb_id)
+  AAs = int(pdb_info["nr_residues"])
+
+  if AAs <= 400:
+    if AAs > 200:
+      info = get_all_info(pdb_id)
+      try:
+        enzyClass = info["polymer"]["enzClass"]["@ec"]
+        ec.write("{}, ".format(pdb_id))
+      except:
+        pass
+    else:
+      pass
+  else:
+    pass
+
+  checked.write("{}, ".format(pdb_id))
