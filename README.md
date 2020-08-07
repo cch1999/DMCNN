@@ -6,7 +6,7 @@ A simple implementation of enzyme function prediction by treating inter-residue 
 
 Program aims to predict the first level of EC classification.
 
-![Reults](https://github.com/cch1999/DMCNN/blob/master/accuracies.png)
+![Results](https://github.com/cch1999/DMCNN/blob/master/figs/accuracies.png)
 
 ### Prerequisites used
 
