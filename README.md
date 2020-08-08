@@ -3,9 +3,11 @@
 
 # Distance Matrix - Convolutional Neural Networks
 
-A simple implementation of enzyme function prediction by treating inter-residue distance matrices as images that are used to train a Convolutional Neural Network (CNN).
+A simple implementation of enzyme function prediction by treating inter-residue distance matrices as images that are used to train a Convolutional Neural Network (CNN). Models are implemented in both in Keras and PyTorch.
 
 ![Matrix](https://github.com/cch1999/DMCNN/blob/master/figs/precomputed_single_channel.png)
+
+An example distance matrix, presence of distinct proteins domains are observed as edges in the matrix "image".
 
 ## Results
 
