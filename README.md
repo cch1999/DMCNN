@@ -5,6 +5,8 @@
 
 A simple implementation of enzyme function prediction by treating inter-residue distance matrices as images that are used to train a Convolutional Neural Network (CNN).
 
+1[Matrix](https://github.com/cch1999/DMCNN/blob/master/figs/precomputed_single_channel.png)
+
 ## Results
 
 Program aims to predict the first level of EC classification.
