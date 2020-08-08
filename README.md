@@ -36,3 +36,8 @@ numpy
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Acknowledgements
+
+Dataset was sourced from [EnzyNet](https://github.com/shervinea/enzynet), a similar approach that uses 3DCNNs.
+
